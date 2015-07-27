@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Basic theme information -->
+    <string name="theme_title">MaterialIcons</string>
+    <string name="developer_name">Android Does</string>
+    <!-- This (optional) link will appear at the end of the theme description -->
+    <string name="developer_link">http://www.apexlauncher.com/</string>
+    <string name="theme_description">This is a sample theme.\n\nTheme developers may put anything here.\n\nEmail: support@anddoes.com</string>
+
+    <!-- Theme settings -->
+    <bool name="config_iconpack">true</bool>
+    <bool name="config_apexskin">false</bool>
+
+    <!-- The feature graphic will appear above the theme description -->
+    <string name="theme_feature">feature</string>
+
+    <!-- Each theme may have up to 5 preview images -->
+    <string name="theme_preview1">preview1</string>
+    <string name="theme_preview2">preview2</string>
+
+    <string name="home_back_img_url">http://www.img.lirent.net/2014/10/Android-Lollipop-wallpapers-Download.jpg</string>
+
+    <!--Navigation Drawer Strings-->
+    <string name="nav_home">Home</string>
+    <string name="nav_apply">Apply</string>
+    <string name="nav_icons">Icons</string>
+    <string name="nav_wall">Wallpapers</string>
+    <string name="nav_req_icons">Request Icons</string>
+    <string name="nav_about">About App</string>
+    <string name="nav_others">Others</string>
+
+    <!--Home - Card 1-->
+    <string name="card1_title">Welcome to MaterialIcons</string>
+    <string name="card1_desc">MaterialIcons is an open source icon pack template based on Material design guidelines</string>
+    <string name="card1_button">Rate it</string>
+    <string name="card1_link">https://play.google.com/store/apps/details?id=com.architjn.materialicons</string>
+
+    <!--Home - Card 1-->
+    <string name="card2_title">Other Apps</string>
+    <string name="card2_desc">Check out more apps by me. And support me by installing them.</string>
+    <string name="card2_button">Other apps</string>
+    <string name="card2_link">https://play.google.com/store/apps/developer?id=AcjMods</string>
+</resources>
