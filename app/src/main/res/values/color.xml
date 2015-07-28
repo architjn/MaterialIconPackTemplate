@@ -5,5 +5,7 @@
     <color name="primaryColor">#5a4dac</color>
     <color name="primaryColorDark">#4b3f9c</color>
     <color name="darkCardColor">#424242</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="dialogcontent">#6d6d6d</color>
 
 </resources>

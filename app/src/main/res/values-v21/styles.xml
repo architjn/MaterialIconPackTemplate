@@ -4,7 +4,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <!--<item name="colorAccent">@color/accentColor</item>-->
+        <item name="colorAccent">@color/accentColor</item>
         <!--<item name="colorPrimary">@color/primaryColor</item>-->
         <!--<item name="colorPrimaryDark">@color/primaryColorDark</item>-->
         <item name="android:statusBarColor">@android:color/transparent</item>
@@ -14,5 +14,12 @@
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowAllowEnterTransitionOverlap">true</item>
         <item name="android:windowAllowReturnTransitionOverlap">true</item>
+    </style>
+
+    <style name="AppTheme.Apply" parent="AppTheme">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryColorDark</item>
+        <item name="android:colorPrimary">@color/primaryColor</item>
+        <item name="android:colorPrimaryDark">@color/primaryColorDark</item>
     </style>
 </resources>

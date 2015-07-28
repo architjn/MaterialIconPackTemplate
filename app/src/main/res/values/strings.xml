@@ -21,6 +21,28 @@
 
     <string name="home_back_img_url">http://www.img.lirent.net/2014/10/Android-Lollipop-wallpapers-Download.jpg</string>
 
+    <!--Strings not to change-->
+    <string name="cm_dialog_content">" is part of CyanogenMod (based) roms.\nWould you like to install it in your device?"</string>
+    <string name="lni_content">" is currently not installed in your device.\nWould you like to install it from Google Play Store?"</string>
+    <string name="lni_title">" Not Installed"</string>
+    <string name="lni_yes">Yes</string>
+    <string name="lni_no">No</string>
+    <string name="share">Share Theme</string>
+    <string name="sendemail">Email Developer</string>
+    <string name="changelog">See Changelog</string>
+    <string name="share_one">"Check out this awesome icon pack by "</string>
+    <string name="share_two">.\nGet it now at </string>
+    <string name="share_title">Share via</string>
+    <string name="changelog_dialog_title">Changelog</string>
+    <string name="nice">great</string>
+    <string name="close">Close</string>
+
+    <!-- Mail subjects for simple e-mail and requests e-mail -->
+    <string name="send_title">Send Mail</string>
+    <string name="email_id">someone@email.com</string>
+    <string name="email_subject">"MaterialIcons"</string>
+    <string name="email_request_subject">"MaterialIcons - Icon Requests"</string>
+
     <!--Navigation Drawer Strings-->
     <string name="nav_home">Home</string>
     <string name="nav_apply">Apply</string>
@@ -29,6 +51,37 @@
     <string name="nav_req_icons">Request Icons</string>
     <string name="nav_about">About App</string>
     <string name="nav_others">Others</string>
+
+    <!--List of Package name and launchers-->
+    <string-array name="launchers_list">
+        <item>Action Launcher|com.actionlauncher.playstore</item>
+        <item>ADW Launcher|org.adw.launcher</item>
+        <item>ADW EX Launcher|org.adwfreak.launcher</item>
+        <item>Apex Launcher|com.anddoes.launcher</item>
+        <item>Atom Launcher|com.dlto.atom.launcher</item>
+        <item>Aviate Launcher|com.tul.aviate</item>
+        <item>CM Theme Engine|org.cyanogenmod.theme.chooser</item>
+        <item>Epic Launcher|com.epic.launcher</item>
+        <item>Go Launcher|com.gau.go.launcherex</item>
+        <item>Google Now Launcher|com.google.android.launcher</item>
+        <item>Holo Launcher|com.mobint.hololauncher</item>
+        <item>Holo Launcher HD|com.mobint.hololauncher.hd</item>
+        <item>Inspire Launcher|com.bam.android.inspirelauncher</item>
+        <item>KK Launcher|com.kk.launcher</item>
+        <item>L Launcher|com.l.launcher</item>
+        <item>LG Home|com.lge.launcher2</item>
+        <item>Lucid Launcher|com.powerpoint45.launcher</item>
+        <item>Mini Launcher|com.jiubang.go.mini.launcher</item>
+        <item>Nemus Launcher|com.nemustech.launcher</item>
+        <item>Next Launcher|com.gtp.nextlauncher</item>
+        <item>Nine Launcher|com.gridappsinc.launcher.free</item>
+        <item>Nova Launcher|com.teslacoilsw.launcher</item>
+        <item>S Launcher|com.s.launcher</item>
+        <item>Smart Launcher|ginlemon.flowerfree</item>
+        <item>Smart Launcher Pro|ginlemon.flowerpro</item>
+        <item>Solo Launcher|home.solo.launcher.free</item>
+        <item>TSF Launcher|com.tsf.shell</item>
+    </string-array>
 
     <!--Home - Card 1-->
     <string name="card1_title">Welcome to MaterialIcons</string>
