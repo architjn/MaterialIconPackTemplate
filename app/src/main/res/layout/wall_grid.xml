@@ -10,11 +10,24 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
+
         <ImageView
             android:id="@+id/wall_grid_art"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/wall_grid_view_height"
             android:scaleType="centerCrop" />
+
+        <ProgressBar
+            android:id="@+id/progressBar_wall_grid"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/wall_grid_art"
+            android:layout_alignLeft="@+id/wall_grid_art"
+            android:layout_alignRight="@+id/wall_grid_art"
+            android:layout_alignTop="@+id/wall_grid_art"
+            android:layout_gravity="center_horizontal"
+            android:padding="60dp" />
 
         <TextView
             android:id="@+id/wall_grid_name"

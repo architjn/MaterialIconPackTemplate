@@ -8,12 +8,14 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -43,18 +45,21 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
         public View mainView;
         public RelativeLayout realBackground;
         public Target target;
+        public ProgressBar pb;
 
         public SimpleItemViewHolder(final View view) {
             super(view);
             wall = (ImageView) view.findViewById(R.id.wall_grid_art);
             name = (TextView) view.findViewById(R.id.wall_grid_name);
             author = (TextView) view.findViewById(R.id.wall_grid_desc);
+            pb = (ProgressBar) view.findViewById(R.id.progressBar_wall_grid);
             realBackground = (RelativeLayout) view.findViewById(R.id.wall_real_background);
             mainView = view;
 
             target = new Target() {
                 @Override
                 public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {
+                    pb.setVisibility(View.GONE);
                     wall.setImageBitmap(bitmap);
                     realBackground.setBackgroundColor(view.getContext().getResources().getColor(android.R.color.white));
                     new ColorGridTask(view.getContext(), bitmap, SimpleItemViewHolder.this).execute();
@@ -95,6 +100,7 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
         holder.mainView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Snackbar.make(((Activity) context).findViewById(R.id.coordinating_wall), "Wait!", Snackbar.LENGTH_LONG).show();
                 new Thread(new Runnable() {
                     @Override
                     public void run() {

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Point;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Display;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.architjn.materialicons.R;
 import com.architjn.materialicons.adapters.WallAdapter;
@@ -38,6 +40,7 @@ public class WallpaperActivity extends AppCompatActivity implements GetWallpaper
         setContentView(R.layout.activity_wall);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar_wall));
         context = this;
+        Snackbar.make(findViewById(R.id.coordinating_wall), "Loading Wallpapers", Snackbar.LENGTH_LONG).show();
         new GetWallpapers(this, this).execute();
         if (Build.VERSION.SDK_INT >= 21)
             getWindow().setStatusBarColor(getResources().getColor(R.color.primaryColorDark));
@@ -68,6 +71,7 @@ public class WallpaperActivity extends AppCompatActivity implements GetWallpaper
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
+        (findViewById(R.id.progressBar_wall)).setVisibility(View.GONE);
         int numOfRows = (int) (size.x / getResources().getDimension(R.dimen.size_of_grid_item));
         GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
