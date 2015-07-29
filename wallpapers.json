@@ -2,18 +2,23 @@
   "walls": [
     {
       "author": "Someone Designer",
-      "url": "http://allsciencemag.com/data/wppl/5/343512-material-hd-wallpaper.jpg",
+      "url": "http://www.lirent.net/wp-content/uploads/2014/10/Android-Lollipop-Material-Design-Wallpaper-6.png",
       "name": "Wallpaper 1"
     },
     {
       "author": "Someone Designer",
-      "url": "https://www.aivanet.com/wp-content/uploads/2015/01/15-4-1.png",
+      "url": "http://pic.youmobile.org/imgcdn/bkg_08_august.jpg",
       "name": "Wallpaper 2"
     },
     {
       "author": "Someone Designer",
       "url": "http://i.imgur.com/aZlqiAT.png",
       "name": "Wallpaper 3"
+    },
+    {
+      "author": "Someone Designer",
+      "url": "http://www.lirent.net/wp-content/uploads/2014/10/Android-Lollipop-wallpapers-p-800x500.png",
+      "name": "Wallpaper 4"
     }
   ]
 }
