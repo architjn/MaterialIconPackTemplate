@@ -1,0 +1,19 @@
+{
+  "walls": [
+    {
+      "author": "Someone Designer",
+      "url": "http://allsciencemag.com/data/wppl/5/343512-material-hd-wallpaper.jpg",
+      "name": "Wallpaper 1"
+    },
+    {
+      "author": "Someone Designer",
+      "url": "https://www.aivanet.com/wp-content/uploads/2015/01/15-4-1.png",
+      "name": "Wallpaper 2"
+    },
+    {
+      "author": "Someone Designer",
+      "url": "http://i.imgur.com/aZlqiAT.png",
+      "name": "Wallpaper 3"
+    }
+  ]
+}
