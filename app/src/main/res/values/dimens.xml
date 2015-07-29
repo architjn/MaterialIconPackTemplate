@@ -7,6 +7,7 @@
     <dimen name="dialog_margin">24dp</dimen>
     <dimen name="cards_padding">16dp</dimen>
     <dimen name="text_med">18sp</dimen>
-    <dimen name="size_of_grid_item">68dp</dimen>
+    <dimen name="size_of_grid_item">78dp</dimen>
     <dimen name="dialog_icon_size">96dp</dimen>
+    <dimen name="wall_grid_view_height">200dp</dimen>
 </resources>

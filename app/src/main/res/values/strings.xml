@@ -37,6 +37,12 @@
     <string name="nice">great</string>
     <string name="close">Close</string>
 
+    <!--Wallpaper json url-->
+    <string name="wall_url">https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/wallpapers.json</string>
+
+    <!--Wallpaper folder path-->
+    <string name="walls_save_location">"/MaterialIcons/Wallpapers/"</string>
+
     <!-- Mail subjects for simple e-mail and requests e-mail -->
     <string name="send_title">Send Mail</string>
     <string name="email_id">someone@email.com</string>

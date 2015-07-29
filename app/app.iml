@@ -100,6 +100,7 @@
     <orderEntry type="library" exported="" name="support-v4-22.2.1" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-22.2.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-22.2.1" level="project" />
+    <orderEntry type="library" exported="" name="pkrequestmanager-0.9" level="project" />
     <orderEntry type="library" exported="" name="design-22.2.1" level="project" />
     <orderEntry type="library" exported="" name="cardview-v7-22.2.1" level="project" />
     <orderEntry type="library" exported="" name="material-dialogs-0.7.7.0" level="project" />

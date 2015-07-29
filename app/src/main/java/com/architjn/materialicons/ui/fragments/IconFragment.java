@@ -1,13 +1,11 @@
 package com.architjn.materialicons.ui.fragments;
 
-import android.content.Context;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,10 +39,10 @@ public class IconFragment extends Fragment {
         return view;
     }
 
-    public int dpToPx(Context context, int dp) {
-        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
-        int px = Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
-        return px;
-    }
+//    public int dpToPx(Context context, int dp) {
+//        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+//        int px = Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
+//        return px;
+//    }
 
 }

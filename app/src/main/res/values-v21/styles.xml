@@ -22,4 +22,11 @@
         <item name="android:colorPrimary">@color/primaryColor</item>
         <item name="android:colorPrimaryDark">@color/primaryColorDark</item>
     </style>
+
+    <style name="AppTheme.Wallpaper" parent="AppTheme">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryColorDark</item>
+        <item name="android:colorPrimary">@color/primaryColor</item>
+        <item name="android:colorPrimaryDark">@color/primaryColorDark</item>
+    </style>
 </resources>

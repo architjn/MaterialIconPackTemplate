@@ -2,67 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/libs/pkrequestmanager-0.9.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-74dc21d49b58e70b012eff0d927523a387b6f0dd.jar" />
-    </item>
-    <item
-        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/design/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="1821601ddbec5ff125653097812823388700af74">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-a3c538dd12e7935fb9f2908a0e74e1c0e7d9f957.jar" />
-    </item>
-    <item
-        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.7.0/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="57bfbac4461731cd061cf6e32c2e62d6f0db71df">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-301100dc2e1948f983eb850ccbdd85c2a4367dbf.jar" />
-    </item>
-    <item
-        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e1fa5e1123997a55e3ed65b44892993ff4b58cfe">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-fc357376628322df0aa79ab08e6f31985101fdc0.jar" />
-    </item>
-    <item
-        jar="/Applications/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-5b22cc9173cfe6d58e99cd022d27d8124ccf2245.jar" />
-    </item>
-    <item
-        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-c3972873ac88b6d14e00201ce7f8ce3ce61b24eb.jar" />
-    </item>
-    <item
-        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/palette-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d3aba1c188fea5ee83ebbcb458be29d1cc0ef483">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-bb255df02a3e30acd7b373373c377a776d69edaf.jar" />
-    </item>
-    <item
-        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-1767ec08dc5cc2d08e8f704ba89b5e4ea3101544.jar" />
-    </item>
-    <item
-        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-74209a2345c1eb9b199e0b1c3cf3db6a9fcc601d.jar" />
+        sha1="8b56cbff34a97f2d5d8095bfda7829c355f87a96">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/pkrequestmanager-0.9-f42f0397a6d9981f24c4e2b73889b99b5a6f894f.jar" />
     </item>
 
 </items>

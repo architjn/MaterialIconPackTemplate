@@ -52,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
                     getResources().getColor(R.color.primaryColor));
             setTaskDescription(taskDescription);
         }
+        (findViewById(R.id.fab_main)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ApplyIconActivity.class));
+            }
+        });
         setNav();
         setCards();
     }
@@ -96,6 +102,10 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, ApplyIconActivity.class));
                 } else if (menuItem.getItemId() == R.id.navigation_icons) {
                     startActivity(new Intent(MainActivity.this, IconsActivity.class));
+                } else if (menuItem.getItemId() == R.id.navigation_wall) {
+                    startActivity(new Intent(MainActivity.this, WallpaperActivity.class));
+                } else if (menuItem.getItemId() == R.id.navigation_req_icons) {
+                    startActivity(new Intent(MainActivity.this, RequestActivity.class));
                 }
                 return true;
             }

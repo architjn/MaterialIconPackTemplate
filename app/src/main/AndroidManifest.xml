@@ -3,6 +3,15 @@
     package="com.architjn.materialicons">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -27,6 +36,14 @@
             android:name=".ui.IconsActivity"
             android:label="@string/theme_title"
             android:theme="@style/AppTheme.Icons" />
+        <activity
+            android:name=".ui.WallpaperActivity"
+            android:label="@string/theme_title"
+            android:theme="@style/AppTheme.Wallpaper" />
+        <activity
+            android:name=".ui.RequestActivity"
+            android:label="@string/theme_title"
+            android:theme="@style/AppTheme.Wallpaper" />
     </application>
 
 </manifest>
