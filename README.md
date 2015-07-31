@@ -21,8 +21,11 @@ A templete of icon pack ,designed by following all material guidlines. Very simp
 #How To Use
 This is very easy to implement, just easy 8 steps and you are ready to go. Check <a href="https://github.com/architjn/MaterialIconPackTemplate/blob/master/HOWTO.md">HOWTO.md</a>
 
-#Team Members
+#Developer
  - <a href="http://google.co.in/+architjn">Archit Jain</a>
+
+####Credits to
+<a href="https://plus.google.com/+JahirFiquitivaJDev">Jahir Fiquitiva</a> for <a href="https://github.com/jahirfiquitiva/PaperBoard">PaperBoard</a>
 
 #Open Source Libraries used
 - Google AppCompat 
