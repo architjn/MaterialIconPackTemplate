@@ -48,25 +48,25 @@
                         android:layout_width="@dimen/activity_icon_display"
                         android:layout_height="@dimen/activity_icon_display"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_es_display" />
+                        android:src="@drawable/ic_display_icon1" />
 
                     <ImageView
                         android:layout_width="@dimen/activity_icon_display"
                         android:layout_height="@dimen/activity_icon_display"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_insta_display" />
+                        android:src="@drawable/ic_display_icon2" />
 
                     <ImageView
                         android:layout_width="@dimen/activity_icon_display"
                         android:layout_height="@dimen/activity_icon_display"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_display" />
+                        android:src="@drawable/ic_display_icon3" />
 
                     <ImageView
                         android:layout_width="@dimen/activity_icon_display"
                         android:layout_height="@dimen/activity_icon_display"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_display" />
+                        android:src="@drawable/ic_display_icon4" />
                 </LinearLayout>
 
                 <android.support.v7.widget.Toolbar
