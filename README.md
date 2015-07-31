@@ -8,7 +8,7 @@ A templete of icon pack ,designed by following all material guidlines. Very simp
 - Wallpaper section
 - Request icon section
 
-###Unique features
+####Unique features
 - Minimal design
 - Fastest 
 - Uses Google Design Library
@@ -17,6 +17,9 @@ A templete of icon pack ,designed by following all material guidlines. Very simp
 - Wallpaper section have some cool animations
 - Wallpaper loads faster
 - 4 Icons preview in collapsing ActionBar
+
+#How To Use
+This is very easy to implement, just easy 8 steps and you are ready to go. Check <a href="https://github.com/architjn/MaterialIconPackTemplate/blob/master/HOWTO.md">HOWTO.md</a>
 
 #Team Members
  - <a href="http://google.co.in/+architjn">Archit Jain</a>
