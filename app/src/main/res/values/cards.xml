@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Home - Card 1-->
+        <bool name="card1_visible">true</bool> <!--set false to hide card-->
+
+        <!--Card1 content-->
+        <string name="card1_title">Welcome to MaterialIcons</string>
+        <string name="card1_desc">MaterialIcons is an open source icon pack template based on Material design guidelines</string>
+        <string name="card1_button">Rate it</string>
+        <string name="card1_link">https://play.google.com/store/apps/details?id=com.architjn.materialicons</string>
+
+        <!--Card1 colors-->
+        <color name="card1_title">#6d6d6d</color>
+        <color name="card1_desc">#6d6d6d</color>
+        <color name="card1_button">#990000</color>
+        <color name="card1_bg">#ffffff</color>
+
+
+
+
+    <!--Home - Card 2-->
+        <bool name="card2_visible">true</bool><!--set false to hide card-->
+
+        <!--Card2 Content-->
+        <string name="card2_title">Other Apps</string>
+        <string name="card2_desc">Check out more apps by me. And support me by installing them.</string>
+        <string name="card2_button">Other apps</string>
+        <string name="card2_link">https://play.google.com/store/apps/developer?id=AcjMods</string>
+
+        <!--Card2 colors-->
+        <color name="card2_title">#6d6d6d</color>
+        <color name="card2_desc">#6d6d6d</color>
+        <color name="card2_button">#990000</color>
+        <color name="card2_bg">#ffffff</color>
+
+
+
+
+    <!--Home - Card 3-->
+        <bool name="card3_visible">true</bool><!--set false to hide card-->
+
+        <!--Card 3 Content-->
+        <string name="card3_title">Buy me a coffee</string>
+        <string name="card3_desc">Did you like my work? Donate me :D</string>
+        <string name="card3_button">Donate</string>
+        <string name="card3_link">http://acjmods.com/donate</string>
+
+        <!--Card3 colors-->
+        <color name="card3_title">#6d6d6d</color>
+        <color name="card3_desc">#6d6d6d</color>
+        <color name="card3_button">#990000</color>
+        <color name="card3_bg">#ffffff</color>
+
+</resources>

@@ -63,9 +63,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setCards() {
-        Button button1, button2;
+        Button button1, button2, button3;
         button1 = (Button) findViewById(R.id.home_card_one_button);
         button2 = (Button) findViewById(R.id.home_card_two_button);
+        button3 = (Button) findViewById(R.id.home_card_three_button);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(goToMarket);
             }
         });
+        if (!getResources().getBoolean(R.bool.card1_visible))
+            (findViewById(R.id.main_card2)).setVisibility(View.GONE);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +85,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(goToMarket);
             }
         });
+        if (!getResources().getBoolean(R.bool.card2_visible))
+            (findViewById(R.id.main_card2)).setVisibility(View.GONE);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse(getResources().getString(R.string.card3_link));
+                Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(goToMarket);
+            }
+        });
+        if (!getResources().getBoolean(R.bool.card3_visible))
+            (findViewById(R.id.main_card3)).setVisibility(View.GONE);
     }
 
     private void setNav() {
@@ -106,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, WallpaperActivity.class));
                 } else if (menuItem.getItemId() == R.id.navigation_req_icons) {
                     startActivity(new Intent(MainActivity.this, RequestActivity.class));
+                } else if (menuItem.getItemId() == R.id.navigation_about) {
+                    startActivity(new Intent(MainActivity.this, AboutAppActivity.class));
                 }
                 return true;
             }

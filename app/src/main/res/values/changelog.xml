@@ -11,14 +11,12 @@
     <string-array name="important">
         <item>The most important:</item>
         <item>Massive cleanup, re-organization, updates, and repairs.</item>
-        <item>Big code, layouts and performance improvements.</item>
-        <item>All these things made by Aidan Follestad. Big thanks to him.</item>
     </string-array>
 
     <string-array name="newstuff">
         <item>New</item>
-        <item>Updated to Support Library 22.1.</item>
-        <item>ActionBarActivity replaced with AppCompatActivity.</item>
+        <item>Very Fast</item>
+        <item>Used Design Library</item>
     </string-array>
 
     <string-array name="improvements">

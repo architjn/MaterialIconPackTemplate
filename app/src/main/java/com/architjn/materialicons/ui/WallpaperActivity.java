@@ -40,7 +40,7 @@ public class WallpaperActivity extends AppCompatActivity implements GetWallpaper
         setContentView(R.layout.activity_wall);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar_wall));
         context = this;
-        Snackbar.make(findViewById(R.id.coordinating_wall), "Loading Wallpapers", Snackbar.LENGTH_LONG).show();
+        Snackbar.make(findViewById(R.id.coordinating_wall), "Loading Wallpapers", Snackbar.LENGTH_SHORT).show();
         new GetWallpapers(this, this).execute();
         if (Build.VERSION.SDK_INT >= 21)
             getWindow().setStatusBarColor(getResources().getColor(R.color.primaryColorDark));

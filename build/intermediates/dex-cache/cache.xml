@@ -2,11 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/libs/pkrequestmanager-0.9.jar"
+        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/de.psdev.licensesdialog/licensesdialog/1.8.0/jars/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="8b56cbff34a97f2d5d8095bfda7829c355f87a96">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/pkrequestmanager-0.9-f42f0397a6d9981f24c4e2b73889b99b5a6f894f.jar" />
+        sha1="063e8091cd19fe30677bce05fa3bc970212f3a9a">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-16c956e8eabfc0b6486d1ba0b0bf2037b3dad164.jar" />
+    </item>
+    <item
+        jar="/Users/architjn/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0-5527e94edbd2e09d3997ff3ed4a90326e4fdc920.jar" />
     </item>
 
 </items>

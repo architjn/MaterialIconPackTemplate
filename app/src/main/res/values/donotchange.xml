@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> <!--Strings not to change-->
+    <string name="cm_dialog_content">" is part of CyanogenMod (based) roms.\nWould you like to install it in your device?"</string>
+    <string name="lni_content">" is currently not installed in your device.\nWould you like to install it from Google Play Store?"</string>
+    <string name="lni_title">" Not Installed"</string>
+    <string name="lni_yes">Yes</string>
+    <string name="lni_no">No</string>
+    <string name="share">Share Theme</string>
+    <string name="sendemail">Email Developer</string>
+    <string name="changelog">See Changelog</string>
+    <string name="share_one">"Check out this awesome icon pack by "</string>
+    <string name="share_two">.\nGet it now at </string>
+    <string name="share_title">Share via</string>
+    <string name="changelog_dialog_title">Changelog</string>
+    <string name="nice">great</string>
+    <string name="close">Close</string>
+    <string name="website">Website</string>
+    <string name="about_card_app_title">Template</string>
+    <string name="about_card_app_desc">Template used in this app is developed by <b>Archit Jain</b>. Code is available on Github\n Copyright &#169;
+        2015 Archit Jain\nLicensed under MIT License.</string>
+    <string name="about_card_app_button">Github</string>
+    <string name="about_card_app_link">https://github.com/architjn/MaterialIconPackTemplate</string>
+    <string name="about_card_app_link2">http://plus.google.com/+architjn</string>
+    <string name="about_card_licenses">Implemented Libraries</string>
+</resources>

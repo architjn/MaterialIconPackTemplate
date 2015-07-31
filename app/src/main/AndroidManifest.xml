@@ -44,6 +44,10 @@
             android:name=".ui.RequestActivity"
             android:label="@string/theme_title"
             android:theme="@style/AppTheme.Wallpaper" />
+        <activity
+            android:name=".ui.AboutAppActivity"
+            android:label="@string/theme_title"
+            android:theme="@style/AppTheme.Wallpaper" />
     </application>
 
 </manifest>

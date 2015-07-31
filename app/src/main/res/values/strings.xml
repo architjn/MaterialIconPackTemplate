@@ -3,9 +3,10 @@
 
     <!-- Basic theme information -->
     <string name="theme_title">MaterialIcons</string>
-    <string name="developer_name">Android Does</string>
-    <!-- This (optional) link will appear at the end of the theme description -->
+    <string name="developer_name">Archit Jain</string>
+    <string name="developer_about">My name is <b>Archit Jain</b>. I am an android app developer</string>
     <string name="developer_link">http://www.apexlauncher.com/</string>
+    <string name="developer_googleplus">http://plus.google.com/+architjn</string>
     <string name="theme_description">This is a sample theme.\n\nTheme developers may put anything here.\n\nEmail: support@anddoes.com</string>
 
     <!-- Theme settings -->
@@ -20,22 +21,6 @@
     <string name="theme_preview2">preview2</string>
 
     <string name="home_back_img_url">http://www.img.lirent.net/2014/10/Android-Lollipop-wallpapers-Download.jpg</string>
-
-    <!--Strings not to change-->
-    <string name="cm_dialog_content">" is part of CyanogenMod (based) roms.\nWould you like to install it in your device?"</string>
-    <string name="lni_content">" is currently not installed in your device.\nWould you like to install it from Google Play Store?"</string>
-    <string name="lni_title">" Not Installed"</string>
-    <string name="lni_yes">Yes</string>
-    <string name="lni_no">No</string>
-    <string name="share">Share Theme</string>
-    <string name="sendemail">Email Developer</string>
-    <string name="changelog">See Changelog</string>
-    <string name="share_one">"Check out this awesome icon pack by "</string>
-    <string name="share_two">.\nGet it now at </string>
-    <string name="share_title">Share via</string>
-    <string name="changelog_dialog_title">Changelog</string>
-    <string name="nice">great</string>
-    <string name="close">Close</string>
 
     <!--Wallpaper json url-->
     <string name="wall_url">https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/wallpapers.json</string>
@@ -88,16 +73,4 @@
         <item>Solo Launcher|home.solo.launcher.free</item>
         <item>TSF Launcher|com.tsf.shell</item>
     </string-array>
-
-    <!--Home - Card 1-->
-    <string name="card1_title">Welcome to MaterialIcons</string>
-    <string name="card1_desc">MaterialIcons is an open source icon pack template based on Material design guidelines</string>
-    <string name="card1_button">Rate it</string>
-    <string name="card1_link">https://play.google.com/store/apps/details?id=com.architjn.materialicons</string>
-
-    <!--Home - Card 1-->
-    <string name="card2_title">Other Apps</string>
-    <string name="card2_desc">Check out more apps by me. And support me by installing them.</string>
-    <string name="card2_button">Other apps</string>
-    <string name="card2_link">https://play.google.com/store/apps/developer?id=AcjMods</string>
 </resources>
