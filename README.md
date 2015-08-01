@@ -33,8 +33,7 @@ This is very easy to implement, just easy 8 steps and you are ready to go. Check
 #Developer
  - <a href="http://google.co.in/+architjn">Archit Jain</a>
 
-####Credits to
-<a href="https://plus.google.com/+JahirFiquitivaJDev">Jahir Fiquitiva</a> for <a href="https://github.com/jahirfiquitiva/PaperBoard">PaperBoard</a>
+######Based on <a href="https://github.com/jahirfiquitiva/PaperBoard">PaperBoard</a> by <a href="https://plus.google.com/+JahirFiquitivaJDev">Jahir Fiquitiva</a> (<a href="">Donate</a>)
 
 #Open Source Libraries used
 - Google AppCompat 
