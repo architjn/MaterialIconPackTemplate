@@ -65,6 +65,14 @@ public class AboutAppActivity extends AppCompatActivity {
                 setLicense();
             }
         });
+        (findViewById(R.id.about_card_based_on)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://github.com/jahirfiquitiva/PaperBoard");
+                Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(goToMarket);
+            }
+        });
     }
 
     private void setLicense() {
