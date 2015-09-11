@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
@@ -28,6 +28,8 @@ import com.squareup.picasso.Target;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -36,7 +38,6 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
 
     private List<WallpaperItem> items;
     private Context context;
-    private Display display;
     private String saveWallLocation;
 
     public final static class SimpleItemViewHolder extends RecyclerView.ViewHolder {
@@ -80,7 +81,6 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
 
     public WallAdapter(Context context, List<WallpaperItem> items, Display display) {
         this.items = items;
-        this.display = display;
         this.context = context;
     }
 
@@ -105,7 +105,7 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
                     @Override
                     public void run() {
                         try {
-                            Uri wallUri = getLocalBitmapUri(holder.wall);
+                            Uri wallUri = getBitmapFromURL(items.get(position).getThumb());
                             if (wallUri != null) {
                                 Intent setWall = new Intent(Intent.ACTION_ATTACH_DATA);
                                 setWall.setDataAndType(wallUri, "image/*");
@@ -122,14 +122,7 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
         });
     }
 
-    public Uri getLocalBitmapUri(ImageView imageView) {
-        Drawable drawable = imageView.getDrawable();
-        Bitmap bmp;
-        if (drawable instanceof BitmapDrawable)
-            bmp = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
-        else
-            return null;
-        Uri bmpUri = null;
+    public Uri getLocalBitmapUri(Bitmap bmp) {
         try {
             saveWallLocation = Environment.getExternalStorageDirectory().getAbsolutePath()
                     + context.getResources().getString(R.string.walls_save_location);
@@ -141,11 +134,27 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
             FileOutputStream out = new FileOutputStream(file);
             bmp.compress(Bitmap.CompressFormat.PNG, 100, out);
             out.close();
-            bmpUri = Uri.fromFile(file);
+            return Uri.fromFile(file);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return bmpUri;
+        return null;
+    }
+
+    public Uri getBitmapFromURL(String src) {
+        try {
+            java.net.URL url = new java.net.URL(src);
+            HttpURLConnection connection = (HttpURLConnection) url
+                    .openConnection();
+            connection.setDoInput(true);
+            connection.connect();
+            InputStream input = connection.getInputStream();
+            Bitmap myBitmap = BitmapFactory.decodeStream(input);
+            return getLocalBitmapUri(myBitmap);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override

@@ -240,7 +240,6 @@ public class MainActivity extends AppCompatActivity {
                 .callback(new MaterialDialog.ButtonCallback() {
                     @Override
                     public void onPositive(MaterialDialog dialog) {
-//                        mPrefs.setNotFirstrun();
                     }
                 }).show();
     }

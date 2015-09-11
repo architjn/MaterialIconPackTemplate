@@ -58,7 +58,8 @@ public class WallpaperActivity extends AppCompatActivity implements GetWallpaper
                         JSONObject jsonChildNode = jsonMainNode.getJSONObject(i);
                         items.add(new WallpaperItem(jsonChildNode.optString("name"),
                                 jsonChildNode.optString("author"),
-                                jsonChildNode.optString("url")));
+                                jsonChildNode.optString("url"),
+                                jsonChildNode.optString("thumb")));
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

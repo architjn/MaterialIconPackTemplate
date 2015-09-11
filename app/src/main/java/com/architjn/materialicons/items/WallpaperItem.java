@@ -5,12 +5,13 @@ package com.architjn.materialicons.items;
  */
 public class WallpaperItem {
 
-    private String name, author, url;
+    private String name, author, url, thumb;
 
-    public WallpaperItem(String name, String author, String url) {
+    public WallpaperItem(String name, String author, String url, String thumb) {
         this.name = name;
         this.author = author;
         this.url = url;
+        this.thumb = thumb;
     }
 
     public String getName() {
@@ -25,4 +26,7 @@ public class WallpaperItem {
         return url;
     }
 
+    public String getThumb() {
+        return thumb;
+    }
 }
