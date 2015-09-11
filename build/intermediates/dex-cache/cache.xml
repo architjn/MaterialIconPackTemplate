@@ -2,6 +2,27 @@
 <items version="2" >
 
     <item
+        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-77230d37584ef41f1b3d3ce0505cc9cc27a21939.jar" />
+    </item>
+    <item
+        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-410e77164a7fea6fe362cabd8509e65023f42b52.jar" />
+    </item>
+    <item
+        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-efbd71934a25c3fb43877b842582d4c9c95bbb31.jar" />
+    </item>
+    <item
         jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/de.psdev.licensesdialog/licensesdialog/1.8.0/jars/classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -9,11 +30,53 @@
         <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-16c956e8eabfc0b6486d1ba0b0bf2037b3dad164.jar" />
     </item>
     <item
+        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/palette-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a527cd5d9aa10f1a387cbd1c4c426fff5022a376">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-3f40f98e56882c6a069333199f8cad457089251c.jar" />
+    </item>
+    <item
+        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-f29122dd344970e311554a11ce9c3d9933401cf3.jar" />
+    </item>
+    <item
         jar="/Users/architjn/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
         <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0-5527e94edbd2e09d3997ff3ed4a90326e4fdc920.jar" />
+    </item>
+    <item
+        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-303bb7bf46769594ea2c4c02d1caf14dbaa07db2.jar" />
+    </item>
+    <item
+        jar="/Users/architjn/.gradle/caches/modules-2/files-2.1/org.jbundle.util.osgi.wrapped/org.jbundle.util.osgi.wrapped.org.apache.http.client/4.1.2/98c86e42679fe7ac066f6c242e0d14f0bce0bb7c/org.jbundle.util.osgi.wrapped.org.apache.http.client-4.1.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="98c86e42679fe7ac066f6c242e0d14f0bce0bb7c">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/org.jbundle.util.osgi.wrapped.org.apache.http.client-4.1.2-01c0f31a059a70679fa3e0659c72b11c7d980a68.jar" />
+    </item>
+    <item
+        jar="/Applications/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-9e16f2178158191ee20b5159b9802e54a55516eb.jar" />
+    </item>
+    <item
+        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-cce583693cacccf70b5c536b592aae0bffc3e6bf.jar" />
     </item>
 
 </items>

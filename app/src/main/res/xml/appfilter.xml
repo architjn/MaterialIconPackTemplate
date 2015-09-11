@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<iconback img1="iconback" />-->
+    <!--<iconmask img1="iconmask" />-->
+    <!--<iconupon img1="iconupon" />-->
+    <!--<scale factor="1.1" />-->
+
+    <!-- Browser -->
+    <!--<item component="ComponentInfo{com.android.browser/com.android.browser.BrowserActivity}" drawable="com_android_browser_browseractivity" />-->
+    <!--<item component="ComponentInfo{com.google.android.browser/com.android.browser.BrowserActivity}" drawable="com_android_browser_browseractivity" />-->
+
+    <!--<item-->
+    <!--component="ComponentInfo{com.estrongs.android.pop/com.estrongs.android.pop.view.FileExplorerActivity}"-->
+    <!--drawable="ic_es" />-->
+    <!--<item-->
+    <!--component="ComponentInfo{com.instagram.android/com.instagram.android.activity.MainTabActivity}"-->
+    <!--drawable="ic_insta" />-->
+    <!--<item-->
+    <!--component="ComponentInfo{com.oginstagm.android/com.oginstagm.android.activity.MainTabActivity}"-->
+    <!--drawable="ic_insta" />-->
+    <item
+        component="ComponentInfo{com.android.settings/com.android.settings.Settings}"
+        drawable="settings" />
+    <item
+        component="ComponentInfo{com.freecharge.android/com.freecharge.ui.MainSplashActivity}"
+        drawable="freecharge" />
+    <item
+        component="ComponentInfo{com.ubercab/com.ubercab.UBUberActivity}"
+        drawable="uber" />
+    <item
+        component="ComponentInfo{com.gaana/com.gaana.SplashScreenActivity}"
+        drawable="gaana" />
+    <item
+        component="ComponentInfo{com.whatsapp/com.whatsapp.Main}"
+        drawable="whatsapp" />
+    <item
+        component="ComponentInfo{com.linkedin.android/.authenticator.LaunchActivity}"
+        drawable="linkedin" />
+    <item
+        component="ComponentInfo{com.redcactus.repost/com.redcactus.repost.HomeActivity}"
+        drawable="repost" />
+    <item
+        component="ComponentInfo{com.grarak.kerneladiutor/com.grarak.kerneladiutor.MainActivity}"
+        drawable="kerneladiutor" />
+    <item
+        component="ComponentInfo{com.syncme.syncmeapp/com.syncme.activities.SplashActivity}"
+        drawable="syncme" />
+    <item
+        component="ComponentInfo{com.lenovo.anyshare.gps/com.lenovo.anyshare.ApMainActivity}"
+        drawable="shareit" />
+    <item
+        component="ComponentInfo{com.saavn.android/com.saavn.android.HomeActivity}"
+        drawable="saavn" />
+    <item
+        component="ComponentInfo{com.toi.reader.activities/com.toi.reader.activities.LoginActivity}"
+        drawable="toi" />
+    <item
+        component="ComponentInfo{com.beta.colorselector/com.colorselector.ui.DashBoard}"
+        drawable="colorpicker" />
+    <item
+        component="ComponentInfo{com.rovio.baba/com.rovio.skynest.SkynestUnityActivity}"
+        drawable="angry_birds_2" />
+    <item
+        component="ComponentInfo{com.nolanlawson.logcat/com.nolanlawson.logcat.LogcatActivity}"
+        drawable="logcat" />
+    <item
+        component="ComponentInfo{com.facebook.orca/com.facebook.orca.auth.StartScreenActivity}"
+        drawable="messenger" />
+    <item
+        component="ComponentInfo{com.yschi.MyAppSharer/com.yschi.MyAppSharer.MyAppSharer}"
+        drawable="myappsharer" />
+    <item
+        component="ComponentInfo{com.twitter.android/com.twitter.android.StartActivity}"
+        drawable="twitter" />
+</resources>

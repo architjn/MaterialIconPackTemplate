@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Basic theme information -->
+    <string name="theme_title">MaterialIcons</string>
+    <string name="developer_name">Archit Jain</string>
+    <string name="developer_about">My name is <b>Archit Jain</b>. I am an android app developer</string>
+    <string name="developer_link">http://www.apexlauncher.com/</string>
+    <string name="developer_googleplus">http://plus.google.com/+architjn</string>
+    <string name="theme_description">This is a sample theme.\n\nTheme developers may put anything here.\n\nEmail: support@anddoes.com</string>
+
+    <!-- Theme settings -->
+    <bool name="config_iconpack">true</bool>
+    <bool name="config_apexskin">false</bool>
+
+    <!-- The feature graphic will appear above the theme description -->
+    <string name="theme_feature">feature</string>
+
+    <!-- Each theme may have up to 5 preview images -->
+    <string name="theme_preview1">preview1</string>
+    <string name="theme_preview2">preview2</string>
+
+    <string name="home_back_img_url">http://www.img.lirent.net/2014/10/Android-Lollipop-wallpapers-Download.jpg</string>
+
+    <!--Wallpaper json url-->
+    <string name="wall_url">https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/wallpapers.json</string>
+
+    <!--Wallpaper folder path-->
+    <string name="walls_save_location">"/MaterialIcons/Wallpapers/"</string>
+
+    <!-- Mail subjects for simple e-mail and requests e-mail -->
+    <string name="send_title">Send Mail</string>
+    <string name="email_id">someone@email.com</string>
+    <string name="email_subject">"MaterialIcons"</string>
+    <string name="email_request_subject">"MaterialIcons - Icon Requests"</string>
+
+    <!--Navigation Drawer Strings-->
+    <string name="nav_home">Home</string>
+    <string name="nav_apply">Apply</string>
+    <string name="nav_icons">Icons</string>
+    <string name="nav_wall">Wallpapers</string>
+    <string name="nav_req_icons">Request Icons</string>
+    <string name="nav_about">About App</string>
+    <string name="nav_others">Others</string>
+
+    <!--List of Package name and launchers-->
+    <string-array name="launchers_list">
+        <item>Action Launcher|com.actionlauncher.playstore</item>
+        <item>ADW Launcher|org.adw.launcher</item>
+        <item>ADW EX Launcher|org.adwfreak.launcher</item>
+        <item>Apex Launcher|com.anddoes.launcher</item>
+        <item>Atom Launcher|com.dlto.atom.launcher</item>
+        <item>Aviate Launcher|com.tul.aviate</item>
+        <item>CM Theme Engine|org.cyanogenmod.theme.chooser</item>
+        <item>Epic Launcher|com.epic.launcher</item>
+        <item>Go Launcher|com.gau.go.launcherex</item>
+        <item>Google Now Launcher|com.google.android.launcher</item>
+        <item>Holo Launcher|com.mobint.hololauncher</item>
+        <item>Holo Launcher HD|com.mobint.hololauncher.hd</item>
+        <item>Inspire Launcher|com.bam.android.inspirelauncher</item>
+        <item>KK Launcher|com.kk.launcher</item>
+        <item>L Launcher|com.l.launcher</item>
+        <item>LG Home|com.lge.launcher2</item>
+        <item>Lucid Launcher|com.powerpoint45.launcher</item>
+        <item>Mini Launcher|com.jiubang.go.mini.launcher</item>
+        <item>Nemus Launcher|com.nemustech.launcher</item>
+        <item>Next Launcher|com.gtp.nextlauncher</item>
+        <item>Nine Launcher|com.gridappsinc.launcher.free</item>
+        <item>Nova Launcher|com.teslacoilsw.launcher</item>
+        <item>S Launcher|com.s.launcher</item>
+        <item>Smart Launcher|ginlemon.flowerfree</item>
+        <item>Smart Launcher Pro|ginlemon.flowerpro</item>
+        <item>Solo Launcher|home.solo.launcher.free</item>
+        <item>TSF Launcher|com.tsf.shell</item>
+    </string-array>
+</resources>
