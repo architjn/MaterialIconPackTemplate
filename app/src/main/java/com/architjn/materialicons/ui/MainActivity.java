@@ -188,15 +188,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkForLicense() {
-        String installer = getPackageManager().getInstallerPackageName(getPackageName());
-        try {
-            if (!installer.equals("com.google.android.feedback")
-                    || !installer.equals("com.android.vending")
-                    || !installer.equals("com.amazon.venezia")) {
+        if (getResources().getBoolean(R.bool.license_check)) {
+            String installer = getPackageManager().getInstallerPackageName(getPackageName());
+            try {
+                if (!installer.equals("com.google.android.feedback")
+                        || !installer.equals("com.android.vending")
+                        || !installer.equals("com.amazon.venezia")) {
+                    showNotLicensedDialog();
+                }
+            } catch (Exception e) {
                 showNotLicensedDialog();
             }
-        } catch (Exception e) {
-            showNotLicensedDialog();
         }
     }
 
@@ -211,6 +213,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onPositive(MaterialDialog dialog) {
                         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URL + getPackageName()));
                         startActivity(browserIntent);
+                        finish();
                     }
 
                     @Override

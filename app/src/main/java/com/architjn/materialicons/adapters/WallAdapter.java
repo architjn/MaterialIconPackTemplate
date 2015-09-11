@@ -96,7 +96,7 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
         holder.realBackground.setBackgroundColor(context.getResources().getColor(android.R.color.white));
         holder.name.setText(items.get(position).getName());
         holder.author.setText(items.get(position).getAuthor());
-        Picasso.with(context).load(items.get(position).getUrl()).into(holder.target);
+        Picasso.with(context).load(items.get(position).getThumb()).into(holder.target);
         holder.mainView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,7 +105,7 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
                     @Override
                     public void run() {
                         try {
-                            Uri wallUri = getBitmapFromURL(items.get(position).getThumb());
+                            Uri wallUri = getBitmapFromURL(items.get(position).getUrl());
                             if (wallUri != null) {
                                 Intent setWall = new Intent(Intent.ACTION_ATTACH_DATA);
                                 setWall.setDataAndType(wallUri, "image/*");
