@@ -11,3 +11,11 @@
 
 
 ###Easy 9 steps to initialize this icon pack
+
+
+####How to add dynamic icons for calender
+1. Instead of \<item\> tag in appfilter.xml use tag \<calender\> and instead of attribute **drawable** use **prefix**
+2. Suppose icon name for calender is calender_icon_1.png, calender_icon_2.png, calender_icon_3.png .... so on (where numbers are dates). So now in prefix use "calender_icon_".
+
+*That is it*<br>
+**You can see commented code in appfilter.xml for example**
