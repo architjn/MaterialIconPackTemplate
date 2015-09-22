@@ -74,7 +74,9 @@ public class LaunchersAdapter extends RecyclerView.Adapter<LaunchersAdapter.Simp
         holder.mainView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (items.get(position).isInstalled()) {
+                if (items.get(position).name.equals("Google Now Launcher")) {
+                    gnlDialog();
+                } else if (items.get(position).isInstalled()) {
                     openLauncher(items.get(position).getName());
                 } else {
                     openInPlayStore(items.get(position));
@@ -141,6 +143,25 @@ public class LaunchersAdapter extends RecyclerView.Adapter<LaunchersAdapter.Simp
                 e.printStackTrace();
             }
         }
+    }
+
+    private void gnlDialog() {
+        final String appLink = MARKET_URL + context.getResources().getString(R.string.extraapp);
+        new MaterialDialog.Builder(context)
+                .title(R.string.gnl_title)
+                .content(R.string.gnl_content)
+                .positiveText(R.string.lni_yes)
+                .negativeText(R.string.lni_no)
+                .callback(new MaterialDialog.ButtonCallback() {
+                              @Override
+                              public void onPositive(MaterialDialog dialog) {
+                                  super.onPositive(dialog);
+                                  Intent intent = new Intent(Intent.ACTION_VIEW);
+                                  intent.setData(Uri.parse(appLink));
+                                  context.startActivity(intent);
+                              }
+                          }
+                ).show();
     }
 
     @Override

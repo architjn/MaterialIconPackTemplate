@@ -3,6 +3,7 @@ package com.architjn.materialicons.ui;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -134,17 +135,34 @@ public class RequestActivity extends AppCompatActivity implements LoadAppsList.C
             holder.appName.setText(items.get(position).getName());
             holder.appIcon.setImageDrawable(items.get(position).getImage());
             holder.checkBox.setChecked(items.get(position).isSelected());
+            holder.checkBox.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    addToList(position);
+                }
+            });
             holder.mainView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    AppInfo mApp = items.get(position);
-                    mApp.setSelected(!mApp.isSelected());
-                    items.set(position, mApp);
-
-                    // Let the adapter know you selected something
-                    notifyDataSetChanged();
+                    addToList(position);
                 }
             });
+        }
+
+        private void addToList(int position) {
+            AppInfo mApp = items.get(position);
+            mApp.setSelected(!mApp.isSelected());
+            items.set(position, mApp);
+
+            // Let the adapter know you selected something
+            new CountDownTimer(400, 1000) {
+                public void onTick(long millisUntilFinished) {
+                }
+
+                public void onFinish() {
+                    notifyDataSetChanged();
+                }
+            }.start();
         }
 
         @Override

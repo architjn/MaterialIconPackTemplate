@@ -19,7 +19,7 @@
     <!--component="ComponentInfo{com.oginstagm.android/com.oginstagm.android.activity.MainTabActivity}"-->
     <!--drawable="ic_insta" />-->
 
-
+    
     <!-- For dynamic calender uncomment code below -->
     <!-- <item
         component="ComponentInfo{com.google.android.calender/com.android.calender.LaunchActivity}"
