@@ -10,7 +10,6 @@
         <item>logcat</item>
         <item>angry_birds_2</item>
         <item>instagram</item>
-        <item>colorpicker</item>
         <item>toi</item>
         <item>saavn</item>
         <item>shareit</item>
@@ -19,8 +18,6 @@
         <item>repost</item>
         <item>linkedin</item>
         <item>settings</item>
-        <item>whatsapp</item>
-        <item>freecharge</item>
         <item>uber</item>
         <item>gaana</item>
     </string-array>
@@ -40,7 +37,9 @@
     <!-- GAMES ICONS -->
     <!-- Game icons are listed here -->
     <string name="games">Games</string>
-    <string-array name="games"></string-array>
+    <string-array name="games">
+        <item>angry_birds_2</item>
+    </string-array>
 
 
     <!-- ALL ICONS -->
@@ -48,8 +47,6 @@
     <string name="icon_pack">All</string>
     <string-array name="icon_pack" translatable="false">
         <item>settings</item>
-        <item>whatsapp</item>
-        <item>freecharge</item>
         <item>uber</item>
         <item>gaana</item>
         <item>linkedin</item>
@@ -59,7 +56,6 @@
         <item>shareit</item>
         <item>saavn</item>
         <item>toi</item>
-        <item>colorpicker</item>
         <item>instagram</item>
         <item>angry_birds_2</item>
         <item>logcat</item>

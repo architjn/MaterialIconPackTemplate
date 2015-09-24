@@ -2,8 +2,8 @@
 <resources>
 
     <color name="accentColor">#ffc106</color>
-    <color name="primaryColor">#5a4dac</color>
-    <color name="primaryColorDark">#4b3f9c</color>
+    <color name="primaryColor">#242424</color>
+    <color name="primaryColorDark">#000000</color>
     <color name="transparent">#00ffffff</color>
     <color name="dialogcontent">#6d6d6d</color>
 

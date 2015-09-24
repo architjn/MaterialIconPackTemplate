@@ -19,13 +19,12 @@ A templete of icon pack ,designed by following all material guidlines. Very simp
 - 4 Icons preview in collapsing ActionBar
 
 #Screenshots
-<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-07-31-22-15-59.png" height="450">
-<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-07-31-22-16-15.png" height="450">
-<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-07-31-22-16-23.png" height="450">
-<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-07-31-22-16-31.png" height="450">
-<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-07-31-22-16-45.png" height="450">
-<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-07-31-22-16-59.png" height="450">
-<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-07-31-22-17-43.png" height="450">
+<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-09-25-00-16-32.png" height="450">
+<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-09-25-00-16-38.png" height="450">
+<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-09-25-00-16-48.png" height="450">
+<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-09-25-00-17-03.png" height="450">
+<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-09-25-00-17-34.png" height="450">
+<img src="https://raw.githubusercontent.com/architjn/MaterialIconPackTemplate/master/SCREENSHOTS/Screenshot_2015-09-25-00-17-55.png" height="450">
 
 #How To Use
 This is very easy to implement, just easy 8 steps and you are ready to go. Check <a href="https://github.com/architjn/MaterialIconPackTemplate/blob/master/HOWTO.md">HOWTO.md</a>

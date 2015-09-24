@@ -17,7 +17,7 @@
         <!--Card1 colors-->
         <color name="card1_title">#6d6d6d</color>
         <color name="card1_desc">#6d6d6d</color>
-        <color name="card1_button">#990000</color>
+        <color name="card1_button">@color/accentColor</color>
         <color name="card1_bg">#ffffff</color>
 
 
@@ -35,7 +35,7 @@
         <!--Card2 colors-->
         <color name="card2_title">#6d6d6d</color>
         <color name="card2_desc">#6d6d6d</color>
-        <color name="card2_button">#990000</color>
+        <color name="card2_button">@color/accentColor</color>
         <color name="card2_bg">#ffffff</color>
 
 
@@ -53,7 +53,7 @@
         <!--Card3 colors-->
         <color name="card3_title">#6d6d6d</color>
         <color name="card3_desc">#6d6d6d</color>
-        <color name="card3_button">#990000</color>
+        <color name="card3_button">@color/accentColor</color>
         <color name="card3_bg">#ffffff</color>
 
 </resources>
