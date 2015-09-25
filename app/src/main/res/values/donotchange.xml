@@ -13,7 +13,9 @@
     <string name="share_title">Share via</string>
     <string name="changelog_dialog_title">Changelog</string>
     <string name="nice">great</string>
+    <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="library">Library</string>
     <string name="website">Website</string>
     <string name="about_card_app_title">Template</string>
     <string name="about_card_app_desc">Template used in this app is developed by <b>Archit Jain</b>. Code is available on Github\n Copyright &#169;

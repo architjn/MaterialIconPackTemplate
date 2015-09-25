@@ -77,6 +77,7 @@ public class AboutAppActivity extends AppCompatActivity {
 
     private void setLicense() {
         new LicensesDialog.Builder(this)
+                .setTitle(R.string.library)
                 .setNotices(R.raw.notices)
                 .build()
                 .show();

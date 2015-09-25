@@ -40,6 +40,7 @@
         android:layout_marginRight="20dp"
         android:clickable="true"
         android:elevation="12dp"
+        android:src="@drawable/ic_email_black_24dp"
         app:backgroundTint="@color/accentColor"
         app:borderWidth="0dp"
         app:layout_anchor="@+id/req_rv"
