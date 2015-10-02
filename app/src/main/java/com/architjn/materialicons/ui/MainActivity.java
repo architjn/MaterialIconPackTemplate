@@ -3,6 +3,7 @@ package com.architjn.materialicons.ui;
 import android.app.ActivityManager;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
@@ -23,6 +24,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.architjn.materialicons.BuildConfig;
+import com.architjn.materialicons.PackageName;
 import com.architjn.materialicons.R;
 import com.architjn.materialicons.adapters.ChangelogAdapter;
 
@@ -39,6 +42,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         checkForLicense();
         init();
+        showChangelogIfNeeded();
+    }
+
+    private void showChangelogIfNeeded() {
+        SharedPreferences shp = getSharedPreferences(PackageName.class.getName().toString(), MODE_PRIVATE);
+        if (shp.getInt("ver", 0) < BuildConfig.VERSION_CODE) {
+            showChangelog();
+            shp.edit().putInt("ver", BuildConfig.VERSION_CODE).apply();
+        }
     }
 
     private void init() {
