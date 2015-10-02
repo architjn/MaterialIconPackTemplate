@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.architjn.materialicons.R;
+import com.architjn.materialicons.others.ScrollAwareFABBehavior;
 import com.architjn.materialicons.tasks.LoadAppsList;
 import com.pk.requestmanager.AppInfo;
 import com.pk.requestmanager.PkRequestManager;
@@ -53,6 +55,9 @@ public class RequestActivity extends AppCompatActivity implements LoadAppsList.C
         rv.setHasFixedSize(true);
 
         Snackbar.make(findViewById(R.id.coordinating_req), "Loading apps may take some time..", Snackbar.LENGTH_LONG).show();
+        CoordinatorLayout.LayoutParams p = (CoordinatorLayout.LayoutParams) findViewById(R.id.fab_rev).getLayoutParams();
+        p.setBehavior(new ScrollAwareFABBehavior(this));
+        findViewById(R.id.fab_rev).setLayoutParams(p);
         (findViewById(R.id.fab_rev)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
