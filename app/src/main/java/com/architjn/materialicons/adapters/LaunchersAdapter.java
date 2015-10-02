@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.architjn.materialicons.PackageName;
 import com.architjn.materialicons.R;
 import com.architjn.materialicons.items.LauncherListItem;
 
@@ -117,7 +118,7 @@ public class LaunchersAdapter extends RecyclerView.Adapter<LaunchersAdapter.Simp
 
     private void openLauncher(String name) {
 
-        final String className = "com.architjn.materialicons" + ".launchers."
+        final String className = PackageName.class.getPackage().getName().toString() + ".launchers."
                 + Character.toUpperCase(name.charAt(0))
                 + name.substring(1).toLowerCase().replace(" ", "").replace("launcher", "")
                 + "Launcher";
