@@ -9,8 +9,10 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -104,16 +106,9 @@ public class MainActivity extends AppCompatActivity {
     private void setNav() {
         if (toolbar != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//            toolbar.setNavigationIcon(R.drawable.ic_drawer);
-//            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    drawerLayout.openDrawer(GravityCompat.START);
-//                }
-//            });
         }
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout,
-                toolbar, R.string.open, R.string.close){
+                toolbar, R.string.open, R.string.close) {
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
@@ -130,23 +125,40 @@ public class MainActivity extends AppCompatActivity {
         };
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                        if (menuItem.getItemId() == R.id.navigation_apply) {
+                            startActivity(new Intent(MainActivity.this, ApplyIconActivity.class));
+                            closeDrawerAfterSmallDelay();
+                        } else if (menuItem.getItemId() == R.id.navigation_icons) {
+                            startActivity(new Intent(MainActivity.this, IconsActivity.class));
+                            closeDrawerAfterSmallDelay();
+                        } else if (menuItem.getItemId() == R.id.navigation_wall) {
+                            startActivity(new Intent(MainActivity.this, WallpaperActivity.class));
+                            closeDrawerAfterSmallDelay();
+                        } else if (menuItem.getItemId() == R.id.navigation_req_icons) {
+                            startActivity(new Intent(MainActivity.this, RequestActivity.class));
+                            closeDrawerAfterSmallDelay();
+                        } else if (menuItem.getItemId() == R.id.navigation_about) {
+                            startActivity(new Intent(MainActivity.this, AboutAppActivity.class));
+                            closeDrawerAfterSmallDelay();
+                        }
+                        return true;
+                    }
+                });
+    }
+
+    private void closeDrawerAfterSmallDelay() {
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
-            public boolean onNavigationItemSelected(MenuItem menuItem) {
-                if (menuItem.getItemId() == R.id.navigation_apply) {
-                    startActivity(new Intent(MainActivity.this, ApplyIconActivity.class));
-                } else if (menuItem.getItemId() == R.id.navigation_icons) {
-                    startActivity(new Intent(MainActivity.this, IconsActivity.class));
-                } else if (menuItem.getItemId() == R.id.navigation_wall) {
-                    startActivity(new Intent(MainActivity.this, WallpaperActivity.class));
-                } else if (menuItem.getItemId() == R.id.navigation_req_icons) {
-                    startActivity(new Intent(MainActivity.this, RequestActivity.class));
-                } else if (menuItem.getItemId() == R.id.navigation_about) {
-                    startActivity(new Intent(MainActivity.this, AboutAppActivity.class));
-                }
-                return true;
+            public void run() {
+                drawerLayout.closeDrawer(GravityCompat.START);
+                navigationView.getMenu().findItem(R.id.navigation_home).setChecked(true);
             }
-        });
+        }, 800);
     }
 
     @Override
