@@ -28,7 +28,7 @@ A templete of icon pack ,designed by following all material guidlines. Very simp
 
 #How To Use
 #####Test app by <a href="https://play.google.com/store/apps/details?id=com.architjn.materialicons">playstore</a><br>
-This is very easy to implement, just easy 8 steps and you are ready to go. Check <a href="https://github.com/architjn/MaterialIconPackTemplate/blob/master/HOWTO.md">HOWTO.md</a>
+This is very easy to implement, just easy 10 steps and you are ready to go. Check <a href="https://github.com/architjn/MaterialIconPackTemplate/blob/master/HOWTO.md">HOWTO</a>
 
 #Developer
  - <a href="http://google.co.in/+architjn">Archit Jain</a>

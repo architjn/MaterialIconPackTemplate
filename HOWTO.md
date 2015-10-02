@@ -7,10 +7,11 @@
 6. Set <a href="https://github.com/architjn/MaterialIconPackTemplate/blob/master/app/src/main/res/values/cards.xml">cards.xml</a> for cards on Main App screen
 7. Put 4 images to be displayed on main screen in <a href="https://github.com/architjn/MaterialIconPackTemplate/tree/master/app/src/main/res/drawable-nodpi">drawable-nodpi</a> folder, named - ic_display_icon1, ic_display_icon2, ic_display_icon3, ic_display_icon4
 8. Now put icon names under right category in <a href="https://github.com/architjn/MaterialIconPackTemplate/blob/master/app/src/main/res/values/icon_pack.xml">icon_pack.xml</a>
+9. <a href="http://i.imgur.com/WSgSwkN.png">Fork</a> the github project and edit <a href="http://i.imgur.com/jCjzSQC.png">wallpapers.json file</a> in home directory. Now get the url of your wallpapers.json file by clicking <a href="http://i.imgur.com/YJhvVtw.png">Raw button</a> and replace new url in <a href="https://github.com/architjn/MaterialIconPackTemplate/blob/master/app/src/main/res/values/strings.xml">strings.xml</a> at line 26. Wallpaper section is ready now.
 9. And at last change <a href="https://github.com/architjn/MaterialIconPackTemplate/blob/master/app/src/main/res/values/changelog.xml">changelog.xml</a>
 
 
-###Easy 9 steps to initialize this icon pack
+###Easy 10 steps to initialize this icon pack
 
 
 ####How to add dynamic icons for calender
