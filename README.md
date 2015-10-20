@@ -1,5 +1,6 @@
 # MaterialIconPackTemplate
 A templete of icon pack ,designed by following all material guidlines. Very simple to implement
+#####Supports Android 6.0 Marshmallow
 
 #Features
 ####Common Features
