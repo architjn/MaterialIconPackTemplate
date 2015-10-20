@@ -1,9 +1,11 @@
 package com.architjn.materialicons.ui;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.graphics.Point;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -33,6 +35,7 @@ public class WallpaperActivity extends AppCompatActivity implements GetWallpaper
 
     ArrayList<WallpaperItem> items = new ArrayList<>();
     private Context context;
+    private WallAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +83,21 @@ public class WallpaperActivity extends AppCompatActivity implements GetWallpaper
         gridview.setLayoutManager(layoutManager);
         gridview.setHasFixedSize(true);
         gridview.addItemDecoration(new SpacesItemDecoration(8, 2));
-        gridview.setAdapter(new WallAdapter(this, items, display));
+        adapter = new WallAdapter(this, items, display);
+        gridview.setAdapter(adapter);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        if (requestCode == WallAdapter.REQUEST_STORAGE) {
+            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Storage permission has been granted
+                adapter.storageRequestAccepted();
+            } else {
+                //Storage permission has been denied
+            }
+        }
     }
 
     @Override

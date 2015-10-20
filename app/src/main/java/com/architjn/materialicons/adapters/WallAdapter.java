@@ -1,14 +1,18 @@
 package com.architjn.materialicons.adapters;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -36,9 +40,11 @@ import java.util.List;
 
 public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemViewHolder> {
 
+    public static final int REQUEST_STORAGE = 102;
     private List<WallpaperItem> items;
     private Context context;
     private String saveWallLocation;
+    private int reqPos = 0;
 
     public final static class SimpleItemViewHolder extends RecyclerView.ViewHolder {
         public ImageView wall;
@@ -104,22 +110,53 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        try {
-                            Uri wallUri = getBitmapFromURL(items.get(position).getUrl());
-                            if (wallUri != null) {
-                                Intent setWall = new Intent(Intent.ACTION_ATTACH_DATA);
-                                setWall.setDataAndType(wallUri, "image/*");
-                                setWall.putExtra("png", "image/*");
-                                ((Activity) context).startActivityForResult(
-                                        Intent.createChooser(setWall, "Set Wallpaper using:"), 1);
-                            }
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
+                        checkForStoragePermission(position, holder);
                     }
                 }).start();
             }
         });
+    }
+
+    private void checkForStoragePermission(int position, SimpleItemViewHolder holder) {
+        if (ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) ==
+                PackageManager.PERMISSION_GRANTED) {
+            getWallpaper(position);
+        } else {
+            if (ActivityCompat.shouldShowRequestPermissionRationale((Activity) context,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                Snackbar.make(holder.mainView, R.string.permission_storage_rationale,
+                        Snackbar.LENGTH_INDEFINITE)
+                        .setAction(R.string.ok, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                ActivityCompat.requestPermissions((Activity) context,
+                                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                        REQUEST_STORAGE);
+                            }
+                        })
+                        .show();
+            } else {
+                reqPos = position;
+                ActivityCompat.requestPermissions(((Activity) context),
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        REQUEST_STORAGE);
+            }
+        }
+    }
+
+    private void getWallpaper(int position) {
+        try {
+            Uri wallUri = getBitmapFromURL(items.get(position).getUrl());
+            if (wallUri != null) {
+                Intent setWall = new Intent(Intent.ACTION_ATTACH_DATA);
+                setWall.setDataAndType(wallUri, "image/*");
+                setWall.putExtra("png", "image/*");
+                ((Activity) context).startActivityForResult(
+                        Intent.createChooser(setWall, "Set Wallpaper using:"), 1);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public Uri getLocalBitmapUri(Bitmap bmp) {
@@ -160,6 +197,10 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
     @Override
     public int getItemCount() {
         return this.items.size();
+    }
+
+    public void storageRequestAccepted() {
+        getWallpaper(reqPos);
     }
 
 }

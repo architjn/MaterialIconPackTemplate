@@ -32,4 +32,6 @@
     <string name="extraapp">com.momocode.shortcuts</string>
     <string name="gnl_title">Google Now Launcher Not Compatible</string>
     <string name="gnl_content">Google Now Launcher is NOT compatible with ANY Icon Packs. Please don\'t low rate the pack for this reason. There\'s a workaround that you can try by yourself, and it\'s the use of an external app that will help you apply the icons. Would you like to download it?</string>
+    <string name="permission_storage_rationale">Storage permission is needed to set Wallpaper.</string>
+    <string name="ok">Ok</string>
 </resources>
