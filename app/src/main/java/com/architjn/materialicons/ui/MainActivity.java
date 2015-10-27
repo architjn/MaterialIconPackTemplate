@@ -233,12 +233,14 @@ public class MainActivity extends AppCompatActivity {
         if (getResources().getBoolean(R.bool.license_check)) {
             String installer = getPackageManager().getInstallerPackageName(getPackageName());
             try {
-                if (!installer.equals("com.google.android.feedback")
-                        || !installer.equals("com.android.vending")
-                        || !installer.equals("com.amazon.venezia")) {
+                if (installer.matches("com.android.vending") ||
+                        installer.matches("com.google.android.feedback") ||
+                        installer.matches("com.amazon.venezia")) {
+                } else {
                     showNotLicensedDialog();
                 }
             } catch (Exception e) {
+                e.printStackTrace();
                 showNotLicensedDialog();
             }
         }

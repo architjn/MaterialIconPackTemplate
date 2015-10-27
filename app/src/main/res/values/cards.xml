@@ -2,7 +2,7 @@
 <resources>
 
     <!--make it True to check license if icon pack is paid-->
-    <bool name="license_check">false</bool>
+    <bool name="license_check">true</bool>
 
 
     <!--Home - Card 1-->

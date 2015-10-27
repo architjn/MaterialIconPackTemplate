@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
+        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ca504182198db4a0f81779ca3fe391374c8cb66a">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/release/classes-1a530bfbb9a5a7b9fe92f8836dff29d469604fee.jar" />
+    </item>
+    <item
         jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.9.1/jars/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="278810b7c706bc3786d4dcb3f93f9afbb49e7c9a">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-cd84a904f62c565006764bac7d1d25d11717dcb9.jar" />
-    </item>
-    <item
-        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/me.henrytao/smooth-app-bar-layout/0.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="8cbbe4b6250b928eee9b554d0a4788cadd8017de">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes-8dc4c2354f488c65b96029882084f496b66a2d87.jar" />
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/release/classes-cd84a904f62c565006764bac7d1d25d11717dcb9.jar" />
     </item>
 
 </items>

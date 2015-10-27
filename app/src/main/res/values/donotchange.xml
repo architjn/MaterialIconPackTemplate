@@ -26,7 +26,7 @@
     <string name="about_card_licenses">Implemented Libraries</string>
     <string name="about_card__based_on">This project is based on PaperBoard by Jahir Fiquitiva</string>
     <string name="license_failed_title">License Check Failed</string>
-    <string name="license_failed">"You are not downloading PaperBoard from Google Play Store. You have two options only:"</string>
+    <string name="license_failed">"You are not downloading this iconpack from Google Play Store. You have two options only:"</string>
     <string name="download">DOWNLOAD</string>
     <string name="exit">Exit App</string>
     <string name="extraapp">com.momocode.shortcuts</string>
