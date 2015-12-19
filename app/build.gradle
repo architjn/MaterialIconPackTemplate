@@ -27,7 +27,9 @@ dependencies {
     compile 'com.android.support:design:+'
     compile 'com.android.support:palette-v7:+'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.afollestad:material-dialogs:+'
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.2@aar') {
+        transitive = true
+    }
     compile files('libs/pkrequestmanager-0.9.jar')
     compile('de.psdev.licensesdialog:licensesdialog:1.8.0')
     compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
