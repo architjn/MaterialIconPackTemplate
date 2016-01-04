@@ -1,39 +1,52 @@
-package com.architjn.materialicons.ui;
+package com.architjn.materialicons.ui.fragments;
 
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.architjn.materialicons.R;
 import com.architjn.materialicons.adapters.LaunchersAdapter;
 import com.architjn.materialicons.items.LauncherListItem;
 import com.architjn.materialicons.others.LauncherComparator;
+import com.architjn.materialicons.ui.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * Created by architjn on 27/07/15.
+ * Created by architjn on 04/01/16.
  */
-public class ApplyIconActivity extends AppCompatActivity {
+public class ApplyIconFragment extends Fragment {
 
     private ArrayList<LauncherListItem> launchers = new ArrayList<>();
-    private RecyclerView rv;
+    private View mainView;
+    private Context context;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_apply);
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar_apply));
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        mainView = inflater.inflate(R.layout.activity_apply, container, false);
+        context = mainView.getContext();
+        setActionBar((Toolbar) mainView.findViewById(R.id.toolbar_apply));
         if (Build.VERSION.SDK_INT >= 21)
-            getWindow().setStatusBarColor(getResources().getColor(R.color.primaryColorDark));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getActivity().getWindow().setStatusBarColor(getResources().getColor(R.color.primaryColorDark));
         init();
+        return mainView;
+    }
+
+    private void setActionBar(Toolbar toolbar) {
+        HomeActivity activity = ((HomeActivity) getActivity());
+        activity.setSupportActionBar(toolbar);
+        activity.updateToggleButton(toolbar);
     }
 
     private void init() {
@@ -43,9 +56,9 @@ public class ApplyIconActivity extends AppCompatActivity {
                     isLauncherInstalled(launcher.split("\\|")[1])));
         }
         Collections.sort(launchers, new LauncherComparator());
-        LaunchersAdapter adapter = new LaunchersAdapter(this, launchers);
-        rv = (RecyclerView) findViewById(R.id.apply_rv);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        LaunchersAdapter adapter = new LaunchersAdapter(context, launchers);
+        RecyclerView rv = (RecyclerView) mainView.findViewById(R.id.apply_rv);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(context);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         layoutManager.scrollToPosition(0);
         rv.setLayoutManager(layoutManager);
@@ -54,27 +67,13 @@ public class ApplyIconActivity extends AppCompatActivity {
     }
 
     private boolean isLauncherInstalled(String packageName) {
-        final PackageManager pm = getPackageManager();
+        final PackageManager pm = context.getPackageManager();
         try {
             pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
             return true;
         } catch (PackageManager.NameNotFoundException e) {
             return false;
         }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == android.R.id.home) {
-            super.onBackPressed();
-        }
-        return false;
     }
 
 }

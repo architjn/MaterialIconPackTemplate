@@ -1,47 +1,61 @@
-package com.architjn.materialicons.ui;
+package com.architjn.materialicons.ui.fragments;
 
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.architjn.materialicons.R;
 import com.architjn.materialicons.adapters.ViewPagerAdapter;
-import com.architjn.materialicons.ui.fragments.IconFragment;
+import com.architjn.materialicons.ui.HomeActivity;
 
 /**
- * Created by architjn on 27/07/15.
+ * Created by architjn on 04/01/16.
  */
-public class IconsActivity extends AppCompatActivity {
+public class IconsFragment extends Fragment {
 
     private Toolbar toolbar;
     private ViewPager viewPager;
+    private View mainView;
+    private Context context;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_icons);
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar_icons));
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        mainView = inflater.inflate(R.layout.activity_icons, container, false);
+        context = mainView.getContext();
         if (Build.VERSION.SDK_INT >= 21)
-            getWindow().setStatusBarColor(getResources().getColor(R.color.primaryColorDark));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getActivity().getWindow().setStatusBarColor(ContextCompat.getColor(context, R.color.primaryColorDark));
         init();
+        setActionBar(toolbar);
         setupViewPager(viewPager);
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.icons_tablayout);
+        TabLayout tabLayout = (TabLayout) mainView.findViewById(R.id.icons_tablayout);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         tabLayout.setupWithViewPager(viewPager);
+        return mainView;
+    }
+
+    private void setActionBar(Toolbar toolbar) {
+        HomeActivity activity = ((HomeActivity) getActivity());
+        activity.setSupportActionBar(toolbar);
+        activity.updateToggleButton(toolbar);
     }
 
     private void init() {
-        viewPager = (ViewPager) findViewById(R.id.icons_viewPager);
-        toolbar = (Toolbar) findViewById(R.id.toolbar_icons);
+        viewPager = (ViewPager) mainView.findViewById(R.id.icons_viewPager);
+        toolbar = (Toolbar) mainView.findViewById(R.id.toolbar_icons);
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
         adapter.addFrag(getFragment(R.array.latest), getResources().getString(R.string.latest));
         adapter.addFrag(getFragment(R.array.system), getResources().getString(R.string.system));
         adapter.addFrag(getFragment(R.array.google), getResources().getString(R.string.google));
@@ -58,19 +72,4 @@ public class IconsActivity extends AppCompatActivity {
         fragment.setArguments(args);
         return fragment;
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == android.R.id.home) {
-            super.onBackPressed();
-        }
-        return false;
-    }
-
 }

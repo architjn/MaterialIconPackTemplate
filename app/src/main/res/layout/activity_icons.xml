@@ -13,13 +13,14 @@
             android:id="@+id/toolbar_icons"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/primaryColor"
             app:layout_scrollFlags="scroll|enterAlways" />
 
         <android.support.design.widget.TabLayout
             android:id="@+id/icons_tablayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/primaryColor"
             app:tabIndicatorColor="#fff" />
     </android.support.design.widget.AppBarLayout>
 

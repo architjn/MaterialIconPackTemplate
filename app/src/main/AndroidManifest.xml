@@ -19,10 +19,12 @@
         android:label="@string/theme_title"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.HomeActivity"
             android:label="@string/theme_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.Action" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="com.anddoes.launcher.THEME" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -148,26 +150,6 @@
             </intent-filter>
 
         </activity>
-        <activity
-            android:name=".ui.ApplyIconActivity"
-            android:label="@string/theme_title"
-            android:theme="@style/AppTheme.Apply" />
-        <activity
-            android:name=".ui.IconsActivity"
-            android:label="@string/theme_title"
-            android:theme="@style/AppTheme.Icons" />
-        <activity
-            android:name=".ui.WallpaperActivity"
-            android:label="@string/theme_title"
-            android:theme="@style/AppTheme.Wallpaper" />
-        <activity
-            android:name=".ui.RequestActivity"
-            android:label="@string/theme_title"
-            android:theme="@style/AppTheme.Wallpaper" />
-        <activity
-            android:name=".ui.AboutAppActivity"
-            android:label="@string/theme_title"
-            android:theme="@style/AppTheme.Wallpaper" />
 
     </application>
 

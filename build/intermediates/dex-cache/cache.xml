@@ -2,18 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.1/jars/classes.jar"
+        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/incremental-classes/debug/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="ca504182198db4a0f81779ca3fe391374c8cb66a">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/release/classes-1a530bfbb9a5a7b9fe92f8836dff29d469604fee.jar" />
-    </item>
-    <item
-        jar="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.9.1/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="278810b7c706bc3786d4dcb3f93f9afbb49e7c9a">
-        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/release/classes-cd84a904f62c565006764bac7d1d25d11717dcb9.jar" />
+        revision="23.0.2"
+        sha1="853c474a4eb532308d7cec313c359ef5f3e6d53e">
+        <dex dex="/Users/architjn/AndroidStudioProjects/MaterialIcons/app/build/intermediates/pre-dexed/debug/classes_268f9b29fd4a54e7524d47569d656c8a7a19ff05.jar" />
     </item>
 
 </items>

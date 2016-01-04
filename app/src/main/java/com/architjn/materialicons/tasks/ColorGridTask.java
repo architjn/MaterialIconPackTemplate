@@ -4,15 +4,18 @@ import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.os.AsyncTask;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.graphics.Palette;
 
+import com.afollestad.async.Action;
 import com.architjn.materialicons.adapters.WallAdapter;
 
 /**
  * Created by architjn on 26/06/15.
  */
-public class ColorGridTask extends AsyncTask<Void, Void, Void> {
+public class ColorGridTask extends Action {
 
     private Context context;
     private Bitmap art;
@@ -25,14 +28,21 @@ public class ColorGridTask extends AsyncTask<Void, Void, Void> {
         this.holder = holder;
     }
 
+    @NonNull
     @Override
-    protected Void doInBackground(Void... params) {
-        Palette.generateAsync(art,
+    public String id() {
+        return ColorGridTask.class.getName();
+    }
+
+    @Nullable
+    @Override
+    protected Object run() throws InterruptedException {
+        Palette.from(art).generate(
                 new Palette.PaletteAsyncListener() {
                     @Override
                     public void onGenerated(final Palette palette) {
-                        Integer colorFrom = context.getResources().getColor(android.R.color.white);
-                        Integer colorTo = palette.getVibrantColor(context.getResources().getColor(android.R.color.white));
+                        Integer colorFrom = ContextCompat.getColor(context, android.R.color.white);
+                        Integer colorTo = palette.getVibrantColor(ContextCompat.getColor(context, android.R.color.white));
                         colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
                         colorAnimation.setDuration(1000);
                         colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -73,10 +83,5 @@ public class ColorGridTask extends AsyncTask<Void, Void, Void> {
                     }
                 });
         return null;
-    }
-
-    @Override
-    protected void onPostExecute(Void aVoid) {
-        super.onPostExecute(aVoid);
     }
 }
