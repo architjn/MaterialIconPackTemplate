@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -37,8 +38,10 @@ public class ApplyIconFragment extends Fragment {
         mainView = inflater.inflate(R.layout.activity_apply, container, false);
         context = mainView.getContext();
         setActionBar((Toolbar) mainView.findViewById(R.id.toolbar_apply));
-        if (Build.VERSION.SDK_INT >= 21)
-            getActivity().getWindow().setStatusBarColor(getResources().getColor(R.color.primaryColorDark));
+        if (Build.VERSION.SDK_INT >= 21) {
+            getActivity().getWindow().setStatusBarColor(ContextCompat.getColor(context, R.color.primaryColorDark));
+            getActivity().getWindow().setNavigationBarColor(ContextCompat.getColor(context,R.color.navigationBarBgColor));
+        }
         init();
         return mainView;
     }
@@ -51,12 +54,16 @@ public class ApplyIconFragment extends Fragment {
 
     private void init() {
         String[] launcherArray = getResources().getStringArray(R.array.launchers_list);
+        int installed = 0;
         for (String launcher : launcherArray) {
-            launchers.add(new LauncherListItem(launcher.split("\\|"),
-                    isLauncherInstalled(launcher.split("\\|")[1])));
+            String[] value = launcher.split("\\|");
+            boolean isInstalled = isLauncherInstalled(value[1]);
+            if (isInstalled)
+                installed++;
+            launchers.add(new LauncherListItem(value, isInstalled));
         }
         Collections.sort(launchers, new LauncherComparator());
-        LaunchersAdapter adapter = new LaunchersAdapter(context, launchers);
+        LaunchersAdapter adapter = new LaunchersAdapter(context, launchers, installed);
         RecyclerView rv = (RecyclerView) mainView.findViewById(R.id.apply_rv);
         LinearLayoutManager layoutManager = new LinearLayoutManager(context);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);

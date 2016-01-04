@@ -43,8 +43,10 @@ public class AboutAppFragment extends Fragment {
         context = mainView.getContext();
         toolbar = (Toolbar) mainView.findViewById(R.id.toolbar_about);
         setActionBar(toolbar);
-        if (Build.VERSION.SDK_INT >= 21)
+        if (Build.VERSION.SDK_INT >= 21){
             getActivity().getWindow().setStatusBarColor(ContextCompat.getColor(context, R.color.primaryColorDark));
+            getActivity().getWindow().setNavigationBarColor(ContextCompat.getColor(context,R.color.navigationBarBgColor));
+        }
         getActionBar().setDisplayHomeAsUpEnabled(true);
         (mainView.findViewById(R.id.about_card_app)).setOnClickListener(new View.OnClickListener() {
             @Override

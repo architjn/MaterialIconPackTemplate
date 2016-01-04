@@ -20,7 +20,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.HomeActivity"
-            android:label="@string/theme_title">
+            android:label="@string/theme_title"
+            android:theme="@style/AppTheme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.Action" />

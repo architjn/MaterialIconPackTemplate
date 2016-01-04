@@ -4,6 +4,12 @@
     <!--make it True to check license if icon pack is paid-->
     <bool name="license_check">true</bool>
 
+    <!--Set splash screenBackground color (Default is white) -->
+    <color name="splash_screen_bg_color">#ffffffff</color>
+
+    <!--Set NavigationBar color (Default is Black)-->
+    <color name="navigationBarBgColor">#ff000000</color>
+
 
     <!--Home - Card 1-->
         <bool name="card1_visible">true</bool> <!--set false to hide card-->

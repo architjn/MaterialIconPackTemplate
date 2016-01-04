@@ -35,6 +35,7 @@ public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         context = this;
@@ -45,6 +46,7 @@ public class HomeActivity extends AppCompatActivity {
     private void init() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setStatusBarColor(ContextCompat.getColor(context, R.color.primaryColorDark));
+            getWindow().setNavigationBarColor(ContextCompat.getColor(context,R.color.navigationBarBgColor));
         }
         drawerLayout = (DrawerLayout) findViewById(R.id.main_drawerlayout);
         navigationView = (NavigationView) findViewById(R.id.main_navigationview);
@@ -101,7 +103,6 @@ public class HomeActivity extends AppCompatActivity {
                             switchFragment(new RequestFragment());
                             closeDrawerAfterSmallDelay();
                         } else if (menuItem.getItemId() == R.id.navigation_about) {
-                            menuItem.setCheckable(true);
                             switchFragment(new AboutAppFragment());
                             closeDrawerAfterSmallDelay();
                         }
@@ -117,7 +118,6 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void run() {
                 drawerLayout.closeDrawer(GravityCompat.START);
-                navigationView.getMenu().findItem(R.id.navigation_home).setChecked(true);
             }
         }, 800);
     }

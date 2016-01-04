@@ -8,8 +8,8 @@ android {
         applicationId "com.architjn.materialicons"
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 6
-        versionName "1.0.3"
+        versionCode 7
+        versionName "2.0.0"
     }
     buildTypes {
         release {

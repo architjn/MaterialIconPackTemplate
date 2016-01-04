@@ -4,13 +4,14 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorAccent">@color/accentColor</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowBackground">@color/appBg</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowAllowEnterTransitionOverlap">true</item>
         <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:navigationBarColor">@color/navigationBarBgColor</item>
+        <item name="android:statusBarColor">@color/primaryColorDark</item>
     </style>
 
     <style name="AppTheme.Apply" parent="AppTheme">
@@ -33,5 +34,7 @@
         <item name="android:colorPrimary">@color/primaryColor</item>
         <item name="android:colorPrimaryDark">@color/primaryColorDark</item>
         <item name="android:windowBackground">@drawable/splash_bg</item>
+        <item name="android:statusBarColor">@color/splash_screen_bg_color</item>
+        <item name="android:navigationBarColor">@color/splash_screen_bg_color</item>
     </style>
 </resources>
