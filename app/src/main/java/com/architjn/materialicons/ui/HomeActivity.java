@@ -39,14 +39,14 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         context = this;
-        switchFragment(new HomeFragment());
+        switchFragment(new HomeFragment(), false);
         init();
     }
 
     private void init() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setStatusBarColor(ContextCompat.getColor(context, R.color.primaryColorDark));
-            getWindow().setNavigationBarColor(ContextCompat.getColor(context,R.color.navigationBarBgColor));
+            getWindow().setNavigationBarColor(ContextCompat.getColor(context, R.color.navigationBarBgColor));
         }
         drawerLayout = (DrawerLayout) findViewById(R.id.main_drawerlayout);
         navigationView = (NavigationView) findViewById(R.id.main_navigationview);
@@ -84,26 +84,26 @@ public class HomeActivity extends AppCompatActivity {
                         if (menuItem.getItemId() == R.id.navigation_home) {
                             menuItem.setCheckable(true);
                             HomeFragment fragment = new HomeFragment();
-                            switchFragment(fragment);
+                            switchFragment(fragment, true);
                             closeDrawerAfterSmallDelay();
                         } else if (menuItem.getItemId() == R.id.navigation_apply) {
                             menuItem.setCheckable(true);
-                            switchFragment(new ApplyIconFragment());
+                            switchFragment(new ApplyIconFragment(), true);
                             closeDrawerAfterSmallDelay();
                         } else if (menuItem.getItemId() == R.id.navigation_icons) {
                             menuItem.setCheckable(true);
-                            switchFragment(new IconsFragment());
+                            switchFragment(new IconsFragment(), true);
                             closeDrawerAfterSmallDelay();
                         } else if (menuItem.getItemId() == R.id.navigation_wall) {
                             menuItem.setCheckable(true);
-                            switchFragment(new WallpapersFragment());
+                            switchFragment(new WallpapersFragment(), true);
                             closeDrawerAfterSmallDelay();
                         } else if (menuItem.getItemId() == R.id.navigation_req_icons) {
                             menuItem.setCheckable(true);
-                            switchFragment(new RequestFragment());
+                            switchFragment(new RequestFragment(), true);
                             closeDrawerAfterSmallDelay();
                         } else if (menuItem.getItemId() == R.id.navigation_about) {
-                            switchFragment(new AboutAppFragment());
+                            switchFragment(new AboutAppFragment(), true);
                             closeDrawerAfterSmallDelay();
                         }
                         return true;
@@ -122,10 +122,15 @@ public class HomeActivity extends AppCompatActivity {
         }, 800);
     }
 
-    public void switchFragment(Fragment fragment) {
-        getSupportFragmentManager().beginTransaction()
-                .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
-                .replace(R.id.fragment_holder, fragment).commit();
+    public void switchFragment(Fragment fragment, boolean b) {
+        if (!b)
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+                    .replace(R.id.fragment_holder, fragment).commit();
+        else
+            getSupportFragmentManager().beginTransaction().addToBackStack(null)
+                    .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+                    .replace(R.id.fragment_holder, fragment).commit();
     }
 
     @Override

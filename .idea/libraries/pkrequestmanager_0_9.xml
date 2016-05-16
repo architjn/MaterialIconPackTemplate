@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pkrequestmanager-0.9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/pkrequestmanager-0.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

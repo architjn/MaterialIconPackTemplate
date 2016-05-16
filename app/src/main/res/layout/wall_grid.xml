@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:drawSelectorOnTop="true"
     android:foreground="?android:attr/selectableItemBackground">
 
@@ -13,7 +13,7 @@
 
         <ImageView
             android:id="@+id/wall_grid_art"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/wall_grid_view_height"
             android:scaleType="centerCrop" />
 

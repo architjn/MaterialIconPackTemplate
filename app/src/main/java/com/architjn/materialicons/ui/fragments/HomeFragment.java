@@ -84,7 +84,7 @@ public class HomeFragment extends Fragment {
         (mainView.findViewById(R.id.fab_main)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((HomeActivity) getActivity()).switchFragment(new ApplyIconFragment());
+                ((HomeActivity) getActivity()).switchFragment(new ApplyIconFragment(), true);
             }
         });
         getHomeActivity().setNav(toolbar);

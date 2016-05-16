@@ -14,10 +14,12 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -43,7 +45,6 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
     public static final int REQUEST_STORAGE = 102;
     private List<WallpaperItem> items;
     private Context context;
-    private String saveWallLocation;
     private int reqPos = 0;
 
     public final static class SimpleItemViewHolder extends RecyclerView.ViewHolder {
@@ -51,7 +52,6 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
         public TextView name, author;
         public View mainView;
         public RelativeLayout realBackground;
-        public Target target;
         public ProgressBar pb;
 
         public SimpleItemViewHolder(final View view) {
@@ -62,30 +62,10 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
             pb = (ProgressBar) view.findViewById(R.id.progressBar_wall_grid);
             realBackground = (RelativeLayout) view.findViewById(R.id.wall_real_background);
             mainView = view;
-
-            target = new Target() {
-                @Override
-                public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {
-                    pb.setVisibility(View.GONE);
-                    wall.setImageBitmap(bitmap);
-                    realBackground.setBackgroundColor(view.getContext().getResources().getColor(android.R.color.white));
-                    new ColorGridTask(view.getContext(), bitmap, SimpleItemViewHolder.this).execute();
-                }
-
-                @Override
-                public void onBitmapFailed(Drawable errorDrawable) {
-
-                }
-
-                @Override
-                public void onPrepareLoad(Drawable placeHolderDrawable) {
-
-                }
-            };
         }
     }
 
-    public WallAdapter(Context context, List<WallpaperItem> items, Display display) {
+    public WallAdapter(Context context, List<WallpaperItem> items) {
         this.items = items;
         this.context = context;
     }
@@ -102,7 +82,26 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
         holder.realBackground.setBackgroundColor(context.getResources().getColor(android.R.color.white));
         holder.name.setText(items.get(position).getName());
         holder.author.setText(items.get(position).getAuthor());
-        Picasso.with(context).load(items.get(position).getThumb()).into(holder.target);
+        Picasso.with(context).load(items.get(position).getThumb())
+                .resize(getScreenWidth() / 2, dpToPx(200)).centerCrop().into(new Target() {
+            @Override
+            public void onBitmapLoaded(final Bitmap bitmap, Picasso.LoadedFrom from) {
+                holder.pb.setVisibility(View.GONE);
+                holder.wall.setImageBitmap(bitmap);
+                holder.realBackground.setBackgroundColor(context.getResources().getColor(android.R.color.white));
+                new ColorGridTask(context, bitmap, holder).execute();
+            }
+
+            @Override
+            public void onBitmapFailed(Drawable errorDrawable) {
+
+            }
+
+            @Override
+            public void onPrepareLoad(Drawable placeHolderDrawable) {
+
+            }
+        });
         holder.mainView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,6 +114,18 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
                 }).start();
             }
         });
+    }
+
+    private int getScreenWidth() {
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        return display.getWidth();
+    }
+
+    public int dpToPx(int dp) {
+        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+        int px = Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
+        return px;
     }
 
     private void checkForStoragePermission(int position, SimpleItemViewHolder holder) {
@@ -161,7 +172,7 @@ public class WallAdapter extends RecyclerView.Adapter<WallAdapter.SimpleItemView
 
     public Uri getLocalBitmapUri(Bitmap bmp) {
         try {
-            saveWallLocation = Environment.getExternalStorageDirectory().getAbsolutePath()
+            String saveWallLocation = Environment.getExternalStorageDirectory().getAbsolutePath()
                     + context.getResources().getString(R.string.walls_save_location);
             SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
             String format = s.format(new Date());

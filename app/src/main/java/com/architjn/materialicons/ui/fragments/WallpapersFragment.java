@@ -104,7 +104,7 @@ public class WallpapersFragment extends Fragment implements GetWallpapers.Callba
         gridview.setLayoutManager(layoutManager);
         gridview.setHasFixedSize(true);
         gridview.addItemDecoration(new SpacesItemDecoration(8, 2));
-        adapter = new WallAdapter(context, items, display);
+        adapter = new WallAdapter(context, items);
         gridview.setAdapter(adapter);
     }
 
